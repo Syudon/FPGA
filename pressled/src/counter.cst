@@ -1,0 +1,5 @@
+IO_LOC  "led" 10;
+IO_PORT "led" DRIVE=8 PULL_MODE=NONE;
+
+IO_LOC  "btn" 15;
+IO_PORT "btn" PULL_MODE=UP;

@@ -1,0 +1,47 @@
+//
+//Written by GowinSynthesis
+//Tool Version "V1.9.9 (64-bit)"
+//Fri Jan  5 03:00:18 2024
+
+//Source file index table:
+//file0 "\C:/Users/Nah/Desktop/FPGA/ledblink/src/counter.v"
+`timescale 100 ps/100 ps
+module LED (
+  btn,
+  led
+)
+;
+input btn;
+output led;
+wire btn_d;
+wire led_d;
+wire n5_7;
+wire VCC;
+wire GND;
+  IBUF btn_ibuf (
+    .O(btn_d),
+    .I(btn) 
+);
+  OBUF led_obuf (
+    .O(led),
+    .I(led_d) 
+);
+  DFF led_s2 (
+    .Q(led_d),
+    .D(n5_7),
+    .CLK(btn_d) 
+);
+  INV n5_s2 (
+    .O(n5_7),
+    .I(led_d) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* LED */

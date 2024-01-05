@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "C:/Users/Nah/Desktop/FPGA/ledblink/src/counter.v",
+  "InstLine" : 1,
+  "InstName" : "LED",
+  "ModuleFile" : "C:/Users/Nah/Desktop/FPGA/ledblink/src/counter.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "LED"
+ }
+]
